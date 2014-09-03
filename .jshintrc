@@ -28,6 +28,7 @@
     "describeComponent",
     "describeMixin",
     "expect",
+    "spyOnEvent",
     "it",
     "requirejs",
     "setupComponent"

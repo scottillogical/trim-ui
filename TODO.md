@@ -1,3 +1,5 @@
+- registration
+- authentication
 - Shows a log of measurements with dates
 - Shows a type of measurement
 - Shows a graph of measurements

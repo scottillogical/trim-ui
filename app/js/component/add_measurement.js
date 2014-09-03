@@ -10,7 +10,13 @@ define(function (require) {
     this.attributes({
     });
 
+    this.submit = function(e) {
+      e.preventDefault();
+      this.trigger('uiAddMeasurement');
+    };
+
     this.after('initialize', function () {
+      this.on('submit', this.submit);
     });
   }
 });
