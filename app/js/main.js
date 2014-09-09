@@ -4,7 +4,9 @@ requirejs.config({
   baseUrl: 'bower_components',
   paths: {
     'component': '../js/component',
-    'page': '../js/page'
+    'templates': '../js/templates',
+    'page': '../js/page',
+    'text': '/bower_components/requirejs-text/text'
   }
 });
 
@@ -14,7 +16,7 @@ require(
     'flight/lib/registry',
     'flight/lib/advice',
     'flight/lib/logger',
-    'flight/lib/debug'
+    'flight/lib/debug',
   ],
 
   function(compose, registry, advice, withLogging, debug) {

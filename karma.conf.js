@@ -20,7 +20,7 @@ module.exports = function (config) {
       'app/bower_components/jasmine-jquery/lib/jasmine-jquery.js',
       'app/bower_components/jasmine-flight/lib/jasmine-flight.js',
       // loaded with require
-      {pattern: 'app/bower_components/flight/**/*.js', included: false},
+      {pattern: 'app/bower_components/**/*.js', included: false},
       {pattern: 'app/js/**/*.js', included: false},
       {pattern: 'test/spec/**/*.spec.js', included: false},
       // test config
