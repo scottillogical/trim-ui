@@ -10,7 +10,9 @@ requirejs.config({
 
   paths: {
     'component': '../js/component',
-    'page': '../js/page'
+    'templates': '../js/templates',
+    'page': '../js/page',
+    'text': 'requirejs-text/text'
   },
 
   // ask Require.js to load these files (all our tests)

@@ -6,7 +6,7 @@ requirejs.config({
     'component': '../js/component',
     'templates': '../js/templates',
     'page': '../js/page',
-    'text': '/bower_components/requirejs-text/text'
+    'text': 'requirejs-text/text'
   }
 });
 

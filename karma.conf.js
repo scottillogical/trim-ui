@@ -22,6 +22,7 @@ module.exports = function (config) {
       // loaded with require
       {pattern: 'app/bower_components/**/*.js', included: false},
       {pattern: 'app/js/**/*.js', included: false},
+      {pattern: 'app/js/**/*.html', included: false},
       {pattern: 'test/spec/**/*.spec.js', included: false},
       // test config
       'test/test-main.js'
