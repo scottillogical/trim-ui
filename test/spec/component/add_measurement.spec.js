@@ -2,9 +2,8 @@
 
 describeComponent('component/add_measurement', function () {
 
-var template = "<form role='form'><div class='form-group'><input type='number' class='form-control' placeholder='Waist Measurement'></div><div class='form-group'><button class='btn btn-success'>Save</button></div></form>";
+  var template = '<div class=\'add-measurement-form\'/>';
 
-  // Initialize the component and attach it to the DOM
   beforeEach(function () {
     this.setupComponent(template);
   });
@@ -15,7 +14,18 @@ var template = "<form role='form'><div class='form-group'><input type='number' c
 
   it('Adds a measurement', function() {
     var eventSpy = spyOnEvent(document, 'uiAddMeasurement');
+    var measurement = '36.0';
+
+
+    $('.waist-input').val(measurement);
     $('button').click();
+
     expect(eventSpy).toHaveBeenTriggeredOn(document);
+    expect(eventSpy.mostRecentCall.data).toEqual({
+      measurement: {
+        type: 'waist',
+        value: measurement
+      }
+    });
   });
 });

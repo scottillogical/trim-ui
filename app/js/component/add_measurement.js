@@ -10,11 +10,18 @@ define(function (require) {
 
   function addMeasurement() {
     this.attributes({
+      waistInputSelector: '.waist-input'
     });
 
     this.submit = function(e) {
       e.preventDefault();
-      this.trigger('uiAddMeasurement');
+      var $waistInput = this.select('waistInputSelector');
+      this.trigger('uiAddMeasurement', {
+        measurement: {
+          type: 'waist',
+          value: $waistInput.val()
+        }
+      });
     };
 
     this.after('initialize', function () {
